@@ -60,7 +60,7 @@ class Piggy(PiggyParent):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
         
-        self.bwd()
+        self.back()
         time.sleep(2)
         self.stop()
 
