@@ -60,9 +60,9 @@ class Piggy(PiggyParent):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
         
-  
-        self.spin_left_spin_right()
-
+        spin_left_spin_right()
+        
+    
     def spin_left_spin_right(self):
         self.left(primary=90, counter=0)
         time.sleep(1)
