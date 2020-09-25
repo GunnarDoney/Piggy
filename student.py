@@ -64,7 +64,7 @@ class Piggy(PiggyParent):
         
     
     def spin_left_spin_right(self):
-        self.left(primary=90, counter=0)
+        self.left(primary=100, counter=0)
         time.sleep(1)
         self.stop() 
 
