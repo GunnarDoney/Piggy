@@ -64,12 +64,13 @@ class Piggy(PiggyParent):
         
     
     def spin_left_spin_right(self):
-        self.left(primary=100, counter=0)
-        time.sleep(1)
-        self.stop() 
-        self.right(primary=100, counter=0)
-        time.sleep(1)
-        self.stop()
+        for x in range(3):
+            self.left(primary=100, counter=0)
+            time.sleep(1)
+            self.stop() 
+            self.right(primary=100, counter=0)
+            time.sleep(1)
+            self.stop()
 
 
     def safe_to_dance(self):
