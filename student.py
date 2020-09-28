@@ -74,7 +74,7 @@ class Piggy(PiggyParent):
             self.stop()
 
     def forward_twirl(self):
-        self.fwd(primary=50, counter=50)
+        self.fwd(left=50, right=50)
         time.sleep(0.5)
         self.left(primary=100, counter=0)
 
