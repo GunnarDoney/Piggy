@@ -74,7 +74,7 @@ class Piggy(PiggyParent):
             self.stop()
 
     def forward_twirl(self):
-        self.fwd(primay=50, counter=50)
+        self.fwd(primary=50, counter=50)
         self.left(primary=100, counter=0)
 
     def safe_to_dance(self):
