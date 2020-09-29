@@ -69,7 +69,7 @@ class Piggy(PiggyParent):
         for _ in range(4):
             if self.read_distance()< 300:
                 print("not safe to dance!")
-                 return False
+                return False
             else:
                 self.turn_by_deg(90)
         print("safe to dance, Brah!")        
