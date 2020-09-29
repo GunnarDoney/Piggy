@@ -63,7 +63,7 @@ class Piggy(PiggyParent):
             #dance methods
             self.spin_left_spin_right()
             self.forward_twirl()
-     def safe_to_dance(self):
+    def safe_to_dance(self):
          """ does a 360 distance check and returns true if safe"""
          #check for all fail/early-termination conditions
         for_in range(4):
