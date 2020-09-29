@@ -61,19 +61,19 @@ class Piggy(PiggyParent):
         if not self.safe_to_dance():
             return False #shut down the dance
             #dance methods
-            self.spin_left_spin_right()
-            self.forward_twirl()
+        self.spin_left_spin_right()
+        self.forward_twirl()
     def safe_to_dance(self):
          """ does a 360 distance check and returns true if safe"""
          #check for all fail/early-termination conditions
-        for_in range(4):
+        for _ in range(4):
             if self.read_distance()< 300:
                 print("not safe to dance!")
                  return False
             else:
                 self.turn_by_deg(90)
         print("safe to dance, Brah!")        
-        return true
+        return True
 
     def spin_left_spin_right(self):
         for x in range(3):
