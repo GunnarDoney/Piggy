@@ -105,6 +105,9 @@ class Piggy(PiggyParent):
             self.left(primary=-60, counter=0)
             time.sleep(.1)
             self.stop()
+    def spin(self):
+        for x in range(2)
+            self.spin()
 
     
     def shake(self):  
