@@ -106,7 +106,7 @@ class Piggy(PiggyParent):
             time.sleep(.1)
             self.stop()
     def spin(self):
-        for x in range(2)
+        for x in range(2):
             self.spin()
 
     
