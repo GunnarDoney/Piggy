@@ -88,14 +88,14 @@ class Piggy(PiggyParent):
 
     def forward_twirl_backward_twirl(self):
         for x in range(4):
-        self.fwd()
-        time.sleep(0.5)
-        self.left(primary=100, counter=0)
-        time.sleep(2)
-        self.back()
-        self.right(primary=100, counter=0)
-        time.sleep(1)
-        self.stop()
+            self.fwd()
+            time.sleep(0.5)
+            self.left(primary=100, counter=0)
+            time.sleep(2)
+            self.back()
+            self.right(primary=100, counter=0)
+            time.sleep(1)
+            self.stop()
     
     def shake(self):  
         self.deg_fwd(720)
