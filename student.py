@@ -93,6 +93,7 @@ class Piggy(PiggyParent):
             self.left(primary=100, counter=0)
             time.sleep(2)
             self.back()
+            self.back()
             time.sleep(0.5)
             self.right(primary=100, counter=0)
             time.sleep(1)
