@@ -99,7 +99,7 @@ class Piggy(PiggyParent):
             self.stop()
     #from Quinn
     def Shuffle(self):
-        for x in range(12):
+        for x in range(20):
             self.right(primary=-60, counter=0)
             time.sleep(.1)
             self.left(primary=-60, counter=0)
