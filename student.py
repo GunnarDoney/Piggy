@@ -66,6 +66,7 @@ class Piggy(PiggyParent):
         self.forward_twirl_backward_twirl()
         self.Shuffle()
         self.spin()
+        self.fwd_look_left_back_look_right_spin()
     def safe_to_dance(self):
         """ does a 360 distance check and returns true if safe"""
         #check for all fail/early-termination conditions
@@ -78,6 +79,7 @@ class Piggy(PiggyParent):
         print("safe to dance, Brah!")        
         return True
 
+    #first dance
     def spin_left_spin_right(self):
         for x in range(3):
             self.left(primary=100, counter=0)
@@ -87,6 +89,7 @@ class Piggy(PiggyParent):
             time.sleep(1)
             self.stop()
 
+    #second dance
     def forward_twirl_backward_twirl(self):
         for x in range(4):
             self.fwd()
@@ -98,6 +101,8 @@ class Piggy(PiggyParent):
             self.right(primary=100, counter=0)
             time.sleep(1)
             self.stop()
+
+    #third dance
     #from Quinn
     def Shuffle(self):
         for x in range(20):
@@ -106,15 +111,27 @@ class Piggy(PiggyParent):
             self.left(primary=-60, counter=0)
             time.sleep(.1)
             self.stop()
+
+     #fourth dance       
     def spin(self):
         for x in range(2):
             self.right(primary=100,counter=0)
             time.sleep(2)
             self.back()
             time.sleep(2)
-            self.left(primary=100, counter=-100)
+            self.left(primary=100, counter=0)
             self.stop()
 
+    def fwd_look_left_back_look_right_spin
+        for x in range(2)
+            self.fwd()
+            time.sleep(2)
+            self.sevo(2000)
+            time.sleep(1)
+            self.back()
+            time.sleep(2)
+            self.servo(1000)
+            self.stop()
 
     
     def shake(self):  
