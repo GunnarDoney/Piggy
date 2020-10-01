@@ -123,7 +123,7 @@ class Piggy(PiggyParent):
             self.stop()
 
     def fwd_look_left_back_look_right_spin(self):
-        for x in range(2)
+        for x in range(2):
             self.fwd()
             time.sleep(2)
             self.sevo(2000)
