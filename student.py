@@ -110,7 +110,11 @@ class Piggy(PiggyParent):
         for x in range(2):
             self.right(primary=100,counter=0)
             time.sleep(2)
+            self.back()
+            time.sleep(2)
+            self.left(primary=100, counter=-100)
             self.stop()
+
 
     
     def shake(self):  
