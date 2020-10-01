@@ -126,7 +126,7 @@ class Piggy(PiggyParent):
         for x in range(2):
             self.fwd()
             time.sleep(2)
-            self.sevo(2000)
+            self.servo(2000)
             time.sleep(1)
             self.back()
             time.sleep(2)
