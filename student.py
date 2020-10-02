@@ -81,7 +81,7 @@ class Piggy(PiggyParent):
 
     #first dance
     def forward_serpintine(self):
-    """moves forward and turns slightly left and right while going forward"""    
+        """moves forward and turns slightly left and right while going forward"""    
         for x in range(3):
             self.left(primary=100, counter=0)
             time.sleep(1)
@@ -92,7 +92,7 @@ class Piggy(PiggyParent):
 
     #second dance
     def forward_twirl_backward_twirl(self):
-    """goes forward and spins then stops and goes back and spins again"""
+        """goes forward and spins then stops and goes back and spins again"""
         for x in range(3):
             self.left(primary=100, counter=0)
             time.sleep(1)
@@ -115,7 +115,7 @@ class Piggy(PiggyParent):
     #third dance
     #from Quinn
     def Shuffle(self):
-    """shuffles backward"""    
+        """shuffles backward"""    
         for x in range(35):
             self.right(primary=-60, counter=0)
             time.sleep(.1)
@@ -125,7 +125,7 @@ class Piggy(PiggyParent):
 
     #fourth dance       
     def spin(self):
-    """goes in a forward spin then stops and goes in a backward spin"""    
+        """goes in a forward spin then stops and goes in a backward spin"""    
         for x in range(2):
             self.right(primary=100,counter=0)
             time.sleep(2)
@@ -136,7 +136,7 @@ class Piggy(PiggyParent):
 
     #fith dance
     def fwd_look_left_back_look_right_spin(self):
-    """goes forward then servo looks left then goes backward and looks right"""    
+        """goes forward then servo looks left then goes backward and looks right"""    
         for x in range(2):
             self.fwd()
             time.sleep(2)
