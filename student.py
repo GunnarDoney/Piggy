@@ -82,7 +82,7 @@ class Piggy(PiggyParent):
     #first dance
     def forward_serpintine(self):
         """moves forward and turns slightly left and right while going forward"""    
-        for x in range(3):
+        for x in range(4):
             self.left(primary=100, counter=0)
             time.sleep(1)
             self.stop() 
