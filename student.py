@@ -61,7 +61,7 @@ class Piggy(PiggyParent):
         print("Dance Time")
         if not self.safe_to_dance():
             return False #shut down the dance
-            #dance methods
+        #dance methods
         self.spin_left_spin_right()
         self.forward_twirl_backward_twirl()
         self.Shuffle()
@@ -105,14 +105,14 @@ class Piggy(PiggyParent):
     #third dance
     #from Quinn
     def Shuffle(self):
-        for x in range(20):
+        for x in range(35):
             self.right(primary=-60, counter=0)
             time.sleep(.1)
             self.left(primary=-60, counter=0)
             time.sleep(.1)
             self.stop()
 
-     #fourth dance       
+    #fourth dance       
     def spin(self):
         for x in range(2):
             self.right(primary=100,counter=0)
@@ -122,6 +122,7 @@ class Piggy(PiggyParent):
             self.left(primary=100, counter=0)
             self.stop()
 
+    #fith dance
     def fwd_look_left_back_look_right_spin(self):
         for x in range(2):
             self.fwd()
