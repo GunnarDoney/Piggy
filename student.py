@@ -21,7 +21,7 @@ class Piggy(PiggyParent):
         self.RIGHT_DEFAULT = 80
         self.safe_distance = 300
         self.close_distance  = 150
-        self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
+        self.MIDPOINT = 1700  # what servo command (1000-2000) is straight forward for your bot?
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
         
