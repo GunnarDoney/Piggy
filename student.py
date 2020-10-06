@@ -173,7 +173,7 @@ class Piggy(PiggyParent):
         while True:
             if self.read_distance() < self.safe_distance:
                 self.stop()
-                print("OH NO SOMETHING IS IN THE WAY!!)
+                print("OH NO SOMETHING IS IN THE WAY!!")
                 self.turn_by_deg(90)
                 time.sleep(,1)
             else:
