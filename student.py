@@ -175,7 +175,7 @@ class Piggy(PiggyParent):
                 self.stop()
                 print("OH NO SOMETHING IS IN THE WAY!!")
                 self.turn_by_deg(90)
-                time.sleep(,1)
+                time.sleep(.1)
             else:
                 self.fwd()
             time.sleep(.01)
