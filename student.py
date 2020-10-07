@@ -174,23 +174,32 @@ class Piggy(PiggyParent):
         # if the three-part check didnt freak out 
         return True
 
+    def turn_until_clear(self):
+        """ Rotate right until no obsticle is seen """
+        print ("---!!!Turning until clear!!")
+        # make sure we are looking straight
+        self.servo(self.MIDPOINT)
+        while safe.read_distance() < self.SAFE_DISTANCE:
+            self.left(primary=40, counter=-40)
+            time.sleep(0.5)
+
+
+
+        self.stop()
+
     def nav(self):
         """ Auto pilot """
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         
-        # TODO: build self.quick_check() that does a fast, 3-part check instead of read_distance
-        self.fwd()
         while True:
             if not self.quick_check():
                 self.stop()
-                print("OH NO SOMETHING IS IN THE WAY!!")
-                self.turn_by_deg(90)
-                time.sleep(.1)
+                self.turn_until_clear()
             else:
                 self.fwd()
-        self.stop()
+                
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
         # TODO: average the left side of the scan dict
