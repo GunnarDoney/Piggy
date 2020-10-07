@@ -179,7 +179,7 @@ class Piggy(PiggyParent):
         print ("---!!!Turning until clear!!")
         # make sure we are looking straight
         self.servo(self.MIDPOINT)
-        while safe.read_distance() < self.SAFE_DISTANCE:
+        while self.read_distance() < self.SAFE_DISTANCE:
             self.left(primary=40, counter=-40)
             time.sleep(0.5)
 
@@ -199,7 +199,7 @@ class Piggy(PiggyParent):
                 self.turn_until_clear()
             else:
                 self.fwd()
-                
+
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
         # TODO: average the left side of the scan dict
