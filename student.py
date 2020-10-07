@@ -162,6 +162,18 @@ class Piggy(PiggyParent):
         """Does a 360 scan and returns the number of obstacles it sees"""
         pass
 
+    def quick_check(self):
+        """ Moves the servo to three angles and preforns a distance check """
+        # loop three times and move the servo
+         for ang in range(self.midpoint - 100, self.midpoint + 101, 100):
+            self.servo(ang)
+            time.sleep(.1)
+            if self.read_distance() < self.safe_distance:
+                return False 
+
+        # if the three-part check didnt freak out 
+        return True
+
     def nav(self):
         """ Auto pilot """
         print("-----------! NAVIGATION ACTIVATED !------------\n")
@@ -171,14 +183,13 @@ class Piggy(PiggyParent):
         # TODO: build self.quick_check() that does a fast, 3-part check instead of read_distance
         self.fwd()
         while True:
-            if self.read_distance() < self.close_distance:
+            if not self.quick_check():
                 self.stop()
                 print("OH NO SOMETHING IS IN THE WAY!!")
                 self.turn_by_deg(90)
                 time.sleep(.1)
             else:
                 self.fwd()
-            time.sleep(.01)
         self.stop()
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
