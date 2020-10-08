@@ -1,5 +1,5 @@
 #!/usr/bin python3
-from collections import orderedDict
+from collections import OrderedDict
 from teacher import PiggyParent
 import sys
 import time
@@ -164,7 +164,7 @@ class Piggy(PiggyParent):
         # do a scan of the area in front of the robot
         self.scan()
         # sort the scan data for easier analysis
-        self.scan_data = orderedDict(sorted(self.scan_data.times()))
+        self.scan_data = OrderedDict(sorted(self.scan_data.times()))
         # print the results
         for angle in self.scan_data:
             dist = self.scan_data[angle]
