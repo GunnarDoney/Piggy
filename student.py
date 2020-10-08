@@ -163,7 +163,8 @@ class Piggy(PiggyParent):
         # do a scan of the area in front of the robot
         self.scan()
         # print the results
-        for angle, dist in enumerate(self.scan_data):
+        for angle in self.scan_data:
+            dist = self.scan_data[angle]
             print("ANGLE: %d | DIST %d" % (angle, dist))
             
 
