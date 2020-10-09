@@ -165,7 +165,7 @@ class Piggy(PiggyParent):
         # do a scan of the area in front of the robot
         self.scan()
         # Figure out how many obstacles there are 
-        see_an_oblect = False
+        see_an_object = False
         count = 0
           
         # print the results
