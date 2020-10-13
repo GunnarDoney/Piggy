@@ -153,6 +153,8 @@ class Piggy(PiggyParent):
         time.sleep(.25) # give your head time to move
         self.servo(2000) # look left
 
+
+
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 10):
@@ -160,9 +162,45 @@ class Piggy(PiggyParent):
             self.scan_data[angle] = self.read_distance()
         # sort the scan data for easier analysis
         self.scan_data = OrderedDict(sorted(self.scan_data.items()))
+
+    def right_or_left(self):
+        """ Should i turn left or right? returns a 'r' or 'l' based on scan data """
+        self.scan()
+        # avarage up the distances on the right side
+        right_sum = 0
+        right_avg =0
+        left_sum = 0
+        left_avg = 0
+
+        # analyze scan results
+        for angle in self.scan_data:
+            # average up the distances on the right side
+            if angle < self.MIDPOINT
+                right_sum += self.scan_data[angle]
+                right_avg += 1
+            else:
+                left_sum += self.scan_data[angle]
+                left_avg += 1
+        
+        # calculate averages
+        left_avg = left_sum / left_avg
+        right_avg = right_sum / right_avg
+
+        if left_avg > right_avg:
+            return 'l'
+        else:
+            return 'r'
+
+        
+
+
+
     def obstacle_count(self):
         """Does a 360 scan and returns the number of obstacles it sees"""
         # do a scan of the area in front of the robot
+        for x in range(4)
+            self.turn_by_deg(90)
+
         self.scan()
         # Figure out how many obstacles there are 
         see_an_object = False
@@ -217,7 +255,12 @@ class Piggy(PiggyParent):
         while True:
             if not self.quick_check():
                 self.stop()
-                self.turn_until_clear()
+               # self.turn_until_clear()
+               if 'l' in self.right_or_left():
+                   self.turn_by_deg(-45)
+                else:
+                    self.turn_by_deg(45)
+
             else:
                 self.fwd()
 
