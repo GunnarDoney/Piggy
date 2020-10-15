@@ -251,15 +251,24 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
+
+        exit_ang = self.quick_check():
+        # because ive written down the exits angle, at anytime i can use:
+        # self.turn_to_deg(exit_ang)
+        turn_count = 0
         
         while True:
             if not self.quick_check():
                 self.stop()
                # self.turn_until_clear()
-                if 'l' in self.right_or_left():
+                if turn_count > 3 and turn_count % 5 == 0
+                    self,turn_to_deg(exit_ang)
+                elif'l' in self.right_or_left():
                     self.turn_by_deg(-45)
                 else:
                     self.turn_by_deg(45)
+
+                turn_count += 1
 
             else:
                 self.fwd()
