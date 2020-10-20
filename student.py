@@ -281,7 +281,7 @@ class Piggy(PiggyParent):
                 turn_count += 1
 
             else:
-                self.fwd()
+                    self.fwd(left = 100, right = 100)
 
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
